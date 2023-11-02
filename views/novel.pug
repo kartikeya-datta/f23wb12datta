@@ -10,17 +10,16 @@ block content
                 div(class = "col-sm-2" ) #{form.novel_pages}
                 
     
-    //-br
-    //-h5= 'buy'
+    br
+    h4= 'buy'
 
-    //-div(class="container-fluid")
-      each bank,index in results
+    div(class="container-fluid")
+      each novel,index in results
         div(class="row", onclick=`buy(${index})`)
-          div(class="col-sm-2") <br>bank #{index}: #{bank.bank_name} account:#{bank.bank_account} balance:#{bank.bank_balance}
+          div(class="col-sm-2") <br>novel #{index}: #{novel.novel_name} author:#{novel.novel_author} pages:#{novel.novel_pages}
 
-    //-script.
+    script.
         function buy(itemNo)
         {
             alert(`You purchased Item ${itemNo+1}`)
         }
-        //
